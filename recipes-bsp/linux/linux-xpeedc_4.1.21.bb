@@ -25,6 +25,7 @@ RPROVIDES_kernel-image = "kernel-image-${KERNEL_VERSION}"
 SRC_URI += "http://xpeedlx.info/linux-${PV}.tar.xz \
     file://kernel-gcc6.patch \
     file://kernel-gcc8.patch \
+    file://kernel-gcc9.patch \
     file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
     file://defconfig \
 		"
