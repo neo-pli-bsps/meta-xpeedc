@@ -22,13 +22,15 @@ PKG_${KERNEL_PACKAGE_NAME}-image = "kernel-image"
 RPROVIDES_${KERNEL_PACKAGE_NAME}-base = "kernel-${KERNEL_VERSION}"
 RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "kernel-image-${KERNEL_VERSION}"
 
-SRC_URI += "http://xpeedlx.info/linux-${PV}.tar.xz \
-    file://kernel-gcc6.patch \
-    file://kernel-gcc8.patch \
-    file://kernel-gcc9.patch \
-    file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
-    file://defconfig \
-		"
+SRC_URI += "http://source.mynonpublic.com/xtrend/linux-${PV}.tar.xz \
+	file://kernel-add-support-for-gcc6.patch \
+	file://kernel-add-support-for-gcc7.patch \
+	file://kernel-add-support-for-gcc8.patch \
+	file://kernel-add-support-for-gcc9.patch \
+	file://0002-log2-give-up-on-gcc-constant-optimizations.patch \
+	file://0003-dont-mark-register-as-const.patch \
+	file://defconfig \
+	"
 
 inherit kernel machine_kernel_pr
 
